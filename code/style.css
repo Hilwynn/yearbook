@@ -40,23 +40,6 @@ header {
   clear: right;
 }
 
-.yearbook-photo-img {
-   border: 1px solid rgba(0, 0, 0, .3);
-   position: relative;
-   width: 100%;
-   max-height: 400px;
-   overflow: hidden;
-}
-
-.yearbook-photo-img img {
-   position: relative;
-   max-width: 100%;
-   width: 100%;
-   height: auto;
-   top: 50%;
-   transform: translate( 0%, -10%);
-}
-
 .yearbook-photo-inner {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, .5);
@@ -73,6 +56,29 @@ header {
   line-height: 0.3;
 }
 
+/* A container for the image which allows for uniform sizing */
+
+.yearbook-photo-img {
+   border: 1px solid rgba(0, 0, 0, .1);
+   position: relative;
+   width: 100%;
+   max-height: 400px;
+   overflow: hidden;
+}
+
+/* Positions the image within the yearbook-photo-image container */
+
+.yearbook-photo-img img {
+   position: relative;
+   max-width: 100%;
+   width: 100%;
+   height: auto;
+   top: 50%;
+   transform: translate(0%, -10%);
+}
+
+/* Animates the even children of yearbook-photo on hover */
+
 .yearbook-photo:nth-child(even) {
   -webkit-transition: 1s ease-in-out;
   -moz-transition: 1s ease-in-out;
@@ -87,6 +93,8 @@ header {
   -ms-transform: rotate(10deg);
   transform: rotate(10deg);
 }
+
+/* Animates the odd children of yearbook-photo on hover */
 
 .yearbook-photo:nth-child(odd) {
   -webkit-transition: 1s ease-in-out;
@@ -106,7 +114,6 @@ header {
 .yearbook-photo-inner p {
   color: #000;
 }
-
 
 /* Media queries. Not very clean as I had to add several breakpoint to get the max-height of yearbook-photo-img working right */
 @media only screen and (max-width: 600px) {
@@ -138,7 +145,7 @@ header {
     width: 50%;
   }
   .yearbook-photo-img {
-     max-height: 290px;
+     max-height: 250px;
   }
 }
 
