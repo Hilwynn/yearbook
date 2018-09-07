@@ -6,7 +6,7 @@
 html {
   background: #0025FF;
   color: #fff;
-  padding-bottom: 40px;
+  padding: 40px 0;
 }
 
 header {
@@ -35,8 +35,8 @@ header {
 }
 
 .yearbook-photo {
+  display: table;
   float: left;
-  clear: right;
 }
 
 .yearbook-photo-inner {
@@ -55,28 +55,20 @@ header {
   line-height: 0.3;
 }
 
-/* A container for the image which allows for uniform sizing */
-
 .yearbook-photo-img {
    border: 1px solid rgba(0, 0, 0, .1);
    position: relative;
    width: 100%;
-   max-height: 400px;
    overflow: hidden;
 }
 
-/* Positions the image within the yearbook-photo-image container */
-
 .yearbook-photo-img img {
+   display: block;
    position: relative;
-   max-width: 100%;
    width: 100%;
-   height: auto;
    top: 50%;
    transform: translate(0%, -10%);
 }
-
-/* Animates the even children of yearbook-photo on hover */
 
 .yearbook-photo:nth-child(even) {
   -webkit-transition: 1s ease-in-out;
@@ -92,8 +84,6 @@ header {
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
 }
-
-/* Animates the odd children of yearbook-photo on hover */
 
 .yearbook-photo:nth-child(odd) {
   -webkit-transition: 1s ease-in-out;
@@ -114,13 +104,13 @@ header {
   color: #000;
 }
 
-/* Media queries. Not very clean as I had to add several breakpoint to get the max-height of yearbook-photo-img working right */
+/* Media queries. Not very clean as I had to add several breakpoints to get the max-height of yearbook-photo-img working okay. I tried! */
 @media only screen and (max-width: 600px) {
   .yearbook-photo {
     width: 100%;
   }
   .yearbook-photo-img {
-     max-height: 300px;
+     max-height: 220px;
   }
 }
 
@@ -132,23 +122,11 @@ header {
     width: 50%;
   }
   .yearbook-photo-img {
-     max-height: 300px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .yearbook {
-    width: 80%;
-  }
-  .yearbook-photo {
-    width: 50%;
-  }
-  .yearbook-photo-img {
      max-height: 250px;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 750px) {
   .yearbook {
     width: 80%;
   }
@@ -156,7 +134,19 @@ header {
     width: 50%;
   }
   .yearbook-photo-img {
-     max-height: 320px;
+     max-height: 255px;
+  }
+}
+
+@media only screen and (min-width: 970px) {
+  .yearbook {
+    width: 80%;
+  }
+  .yearbook-photo {
+    width: 50%;
+  }
+  .yearbook-photo-img {
+     max-height: 330px;
   }
 }
 
@@ -168,11 +158,11 @@ header {
     width: 33%;
   }
   .yearbook-photo-img {
-     max-height: 270px;
+     max-height: 220px;
   }
 }
 
-@media only screen and (min-width: 1450px) {
+@media only screen and (min-width: 1300px) {
   .yearbook {
     width: 80%;
   }
@@ -180,7 +170,7 @@ header {
     width: 33%;
   }
   .yearbook-photo-img {
-     max-height: 320px;
+     max-height: 310px;
   }
 }
 
@@ -205,5 +195,17 @@ header {
   }
   .yearbook-photo-img {
      max-height: 400px;
+  }
+}
+
+@media only screen  and (min-width : 2000px) {
+  .yearbook {
+    width: 80%;
+  }
+  .yearbook-photo {
+    width: 33%;
+  }
+  .yearbook-photo-img {
+     max-height: 450px;
   }
 }
