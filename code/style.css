@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -42,7 +43,8 @@ header {
 .yearbook-photo-inner {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, .5);
-	box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
+	        box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
   color: #292929;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 1.7em;
@@ -67,36 +69,27 @@ header {
    position: relative;
    width: 100%;
    top: 50%;
-   transform: translate(0%, -10%);
+   -webkit-transform: translate(0%, -10%);
+           transform: translate(0%, -10%);
 }
 
 .yearbook-photo:nth-child(even) {
   -webkit-transition: 1s ease-in-out;
-  -moz-transition: 1s ease-in-out;
-  -o-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
 
 .yearbook-photo:nth-child(even):hover {
   -webkit-transform: rotate(15deg);
-  -moz-transform: rotate(15deg);
-  -o-transform: rotate(15deg);
-  -ms-transform: rotate(15deg);
   transform: rotate(15deg);
 }
 
 .yearbook-photo:nth-child(odd) {
   -webkit-transition: 1s ease-in-out;
-  -moz-transition: 1s ease-in-out;
-  -o-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
 
 .yearbook-photo:nth-child(odd):hover {
   -webkit-transform: rotate(-15deg);
-  -moz-transform: rotate(-15deg);
-  -o-transform: rotate(-15deg);
-  -ms-transform: rotate(-15deg);
   transform: rotate(-15deg);
 }
 
